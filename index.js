@@ -2,10 +2,13 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
 
-const PORT = 3000;
+const PORT = 5000;
 
 const superheroes = [];
 
@@ -36,7 +39,7 @@ app.post("/superheroes", (req, res) => {
   const newHero = { name, superpower, humilityScore };
   superheroes.push(newHero);
 
-  res.status(201).json({ message: "Superhero added to the successfully!", superhero: newHero });
+  res.status(201).json({ message: "Superhero added to the team successfully!", superhero: newHero });
 });
 
 // Calling the morning team meeting

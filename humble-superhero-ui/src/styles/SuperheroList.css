@@ -1,0 +1,27 @@
+.list-container {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f9fa;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 6px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    width: calc(100% - 40px);
+}
+
+li:last-child {
+    border-bottom: none;
+}
